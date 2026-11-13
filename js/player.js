@@ -1,6 +1,5 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { SkeletonUtils } from 'three/addons/utils/SkeletonUtils.js';
 import { LANES, lerp } from './utils.js';
 
 const CHAR_URL = 'https://gobkit.com/freebies/human001/FoodCourier.glb';
