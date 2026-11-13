@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0a0a12;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #fff;
+}
+
+#c {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  inset: 0;
+}
+
+#ui {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: none;
+  z-index: 10;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+
+#score {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+#coins {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffd700;
+}
+
+#message {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+#overlay, #gameover {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 5, 15, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  text-align: center;
+  padding: 24px;
+}
+
+#overlay h1, #gameover h2 {
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #ff6b35, #f7c948);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#overlay p, #gameover p {
+  font-size: 16px;
+  line-height: 1.5;
+  opacity: 0.85;
+  margin-bottom: 28px;
+  max-width: 320px;
+}
+
+button {
+  background: linear-gradient(135deg, #ff6b35, #e85d04);
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 14px 36px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (max-width: 480px) {
+  #score { font-size: 26px; }
+  #overlay h1 { font-size: 32px; }
+}
