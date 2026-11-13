@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Subway Runner</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.170.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="ui">
+    <div id="score">0</div>
+    <div id="coins">🪙 0</div>
+    <div id="message">Tap / Swipe or use ← → ↑ ↓ / Space</div>
+  </div>
+  <div id="overlay">
+    <h1>SUBWAY RUNNER</h1>
+    <p>Swipe left/right to change lanes<br>Swipe up or Space to jump<br>Collect coins, dodge trains!</p>
+    <button id="startBtn">START RUN</button>
+  </div>
+  <div id="gameover" class="hidden">
+    <h2>GAME OVER</h2>
+    <p id="finalScore">Score: 0</p>
+    <button id="retryBtn">TRY AGAIN</button>
+  </div>
+  <canvas id="c"></canvas>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
